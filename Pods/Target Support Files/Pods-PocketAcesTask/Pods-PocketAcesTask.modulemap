@@ -1,0 +1,6 @@
+framework module Pods_PocketAcesTask {
+  umbrella header "Pods-PocketAcesTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
