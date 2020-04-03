@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		05DD90E37524814B6A7C56BB /* Pods_PocketAcesTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E0ECEF9092F8114985044 /* Pods_PocketAcesTask.framework */; };
-		171295FB2437309D00092429 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171295F42437309D00092429 /* EmptyView.swift */; };
-		171295FC2437309D00092429 /* CustomUIimageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171295F52437309D00092429 /* CustomUIimageViews.swift */; };
-		171295FD2437309D00092429 /* CustomUIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171295F62437309D00092429 /* CustomUIViews.swift */; };
 		171295FE2437309D00092429 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171295F82437309D00092429 /* UIColor.swift */; };
 		171295FF2437309D00092429 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171295F92437309D00092429 /* UITableView.swift */; };
 		171296002437309D00092429 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171295FA2437309D00092429 /* String.swift */; };
@@ -31,12 +28,17 @@
 		1757ACF224372FC5002E028D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACED24372FC5002E028D /* BaseViewController.swift */; };
 		1757ACF324372FC5002E028D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACEE24372FC5002E028D /* Utils.swift */; };
 		1757ACF424372FC5002E028D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACEF24372FC5002E028D /* NetworkRequest.swift */; };
+		1786C00C2437387A00F88061 /* CustomUIimageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0072437387A00F88061 /* CustomUIimageViews.swift */; };
+		1786C00D2437387A00F88061 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0082437387A00F88061 /* BaseTableViewCell.swift */; };
+		1786C00E2437387A00F88061 /* CustomUIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0092437387A00F88061 /* CustomUIViews.swift */; };
+		1786C00F2437387A00F88061 /* UserClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C00A2437387A00F88061 /* UserClusterView.swift */; };
+		1786C0102437387A00F88061 /* CustomUIButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C00B2437387A00F88061 /* CustomUIButtons.swift */; };
+		1786C012243738A600F88061 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C011243738A600F88061 /* EmptyView.swift */; };
+		1786C01424373A9000F88061 /* test1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1786C01324373A9000F88061 /* test1.jpeg */; };
+		1786C01624373B5600F88061 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C01524373B5600F88061 /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		171295F42437309D00092429 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
-		171295F52437309D00092429 /* CustomUIimageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIimageViews.swift; sourceTree = "<group>"; };
-		171295F62437309D00092429 /* CustomUIViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIViews.swift; sourceTree = "<group>"; };
 		171295F82437309D00092429 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		171295F92437309D00092429 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		171295FA2437309D00092429 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 		1757ACEE24372FC5002E028D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1757ACEF24372FC5002E028D /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		176E0ECEF9092F8114985044 /* Pods_PocketAcesTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketAcesTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1786C0072437387A00F88061 /* CustomUIimageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIimageViews.swift; sourceTree = "<group>"; };
+		1786C0082437387A00F88061 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		1786C0092437387A00F88061 /* CustomUIViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIViews.swift; sourceTree = "<group>"; };
+		1786C00A2437387A00F88061 /* UserClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClusterView.swift; sourceTree = "<group>"; };
+		1786C00B2437387A00F88061 /* CustomUIButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButtons.swift; sourceTree = "<group>"; };
+		1786C011243738A600F88061 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		1786C01324373A9000F88061 /* test1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpeg; sourceTree = "<group>"; };
+		1786C01524373B5600F88061 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		4563C578C3D09742BCE26A0A /* Pods-PocketAcesTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketAcesTask.release.xcconfig"; path = "Target Support Files/Pods-PocketAcesTask/Pods-PocketAcesTask.release.xcconfig"; sourceTree = "<group>"; };
 		6A2357274326E517713A57D3 /* Pods-PocketAcesTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketAcesTask.debug.xcconfig"; path = "Target Support Files/Pods-PocketAcesTask/Pods-PocketAcesTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,16 +93,6 @@
 				4563C578C3D09742BCE26A0A /* Pods-PocketAcesTask.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		171295F32437309D00092429 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				171295F42437309D00092429 /* EmptyView.swift */,
-				171295F52437309D00092429 /* CustomUIimageViews.swift */,
-				171295F62437309D00092429 /* CustomUIViews.swift */,
-			);
-			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		171295F72437309D00092429 /* Extensions */ = {
@@ -144,9 +144,9 @@
 		1757ACC724372CDB002E028D /* PocketAcesTask */ = {
 			isa = PBXGroup;
 			children = (
+				1786C0062437387A00F88061 /* CustomViews */,
 				1712960C2437333100092429 /* NewsModels */,
 				17129601243730B500092429 /* RestApis */,
-				171295F32437309D00092429 /* CustomViews */,
 				171295F72437309D00092429 /* Extensions */,
 				1757ACEA24372FC5002E028D /* wrappers */,
 				1757ACDE24372E89002E028D /* DevEnv */,
@@ -155,6 +155,7 @@
 				1757ACCE24372CDB002E028D /* Main.storyboard */,
 				1757ACD124372CDC002E028D /* Assets.xcassets */,
 				1757ACD324372CDC002E028D /* LaunchScreen.storyboard */,
+				1786C01324373A9000F88061 /* test1.jpeg */,
 			);
 			path = PocketAcesTask;
 			sourceTree = "<group>";
@@ -174,12 +175,27 @@
 				17129603243730B500092429 /* RestApi.swift */,
 				1757ACEB24372FC5002E028D /* Observer.swift */,
 				1757ACEC24372FC5002E028D /* ImageLoader.swift */,
-				1757ACED24372FC5002E028D /* BaseViewController.swift */,
 				1757ACEE24372FC5002E028D /* Utils.swift */,
 				1757ACEF24372FC5002E028D /* NetworkRequest.swift */,
 				1712960A2437321F00092429 /* LocalData.swift */,
+				1757ACED24372FC5002E028D /* BaseViewController.swift */,
+				1786C01524373B5600F88061 /* BaseTableViewController.swift */,
 			);
 			path = wrappers;
+			sourceTree = "<group>";
+		};
+		1786C0062437387A00F88061 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1786C0072437387A00F88061 /* CustomUIimageViews.swift */,
+				1786C0082437387A00F88061 /* BaseTableViewCell.swift */,
+				1786C0092437387A00F88061 /* CustomUIViews.swift */,
+				1786C00A2437387A00F88061 /* UserClusterView.swift */,
+				1786C00B2437387A00F88061 /* CustomUIButtons.swift */,
+				1786C011243738A600F88061 /* EmptyView.swift */,
+			);
+			name = CustomViews;
+			path = "../../eezylife-sample/eezylife-sample/CustomViews";
 			sourceTree = "<group>";
 		};
 		5C130EF90E5371AD1051AE86 /* Frameworks */ = {
@@ -253,6 +269,7 @@
 				1757ACD524372CDC002E028D /* LaunchScreen.storyboard in Resources */,
 				1757ACD224372CDC002E028D /* Assets.xcassets in Resources */,
 				1757ACD024372CDB002E028D /* Main.storyboard in Resources */,
+				1786C01424373A9000F88061 /* test1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,21 +324,25 @@
 			files = (
 				17129606243730B500092429 /* RestApi.swift in Sources */,
 				1757ACCD24372CDB002E028D /* ViewController.swift in Sources */,
+				1786C0102437387A00F88061 /* CustomUIButtons.swift in Sources */,
+				1786C00E2437387A00F88061 /* CustomUIViews.swift in Sources */,
 				171295FE2437309D00092429 /* UIColor.swift in Sources */,
-				171295FB2437309D00092429 /* EmptyView.swift in Sources */,
 				1757ACF024372FC5002E028D /* Observer.swift in Sources */,
 				171296002437309D00092429 /* String.swift in Sources */,
 				1757ACF424372FC5002E028D /* NetworkRequest.swift in Sources */,
 				1757ACF124372FC5002E028D /* ImageLoader.swift in Sources */,
-				171295FC2437309D00092429 /* CustomUIimageViews.swift in Sources */,
 				1757ACF324372FC5002E028D /* Utils.swift in Sources */,
-				171295FD2437309D00092429 /* CustomUIViews.swift in Sources */,
 				17129607243730B500092429 /* NewsApi.swift in Sources */,
+				1786C012243738A600F88061 /* EmptyView.swift in Sources */,
+				1786C00C2437387A00F88061 /* CustomUIimageViews.swift in Sources */,
 				1757ACC924372CDB002E028D /* AppDelegate.swift in Sources */,
 				1712960B2437321F00092429 /* LocalData.swift in Sources */,
 				171295FF2437309D00092429 /* UITableView.swift in Sources */,
+				1786C00D2437387A00F88061 /* BaseTableViewCell.swift in Sources */,
 				17129605243730B500092429 /* Apis.swift in Sources */,
+				1786C01624373B5600F88061 /* BaseTableViewController.swift in Sources */,
 				1757ACDD24372E58002E028D /* DevEnv.swift in Sources */,
+				1786C00F2437387A00F88061 /* UserClusterView.swift in Sources */,
 				1757ACF224372FC5002E028D /* BaseViewController.swift in Sources */,
 				1712960E2437334000092429 /* News.swift in Sources */,
 				171296092437312800092429 /* UIButton.swift in Sources */,

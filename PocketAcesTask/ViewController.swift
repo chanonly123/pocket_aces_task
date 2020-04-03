@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        NewsApi.getTopHeadline { (res, data) in
+            
+        }
         
         
     }
@@ -21,3 +23,6 @@ class ViewController: UIViewController {
 
 }
 
+class NewsCell: BaseTableViewCell {
+    
+}

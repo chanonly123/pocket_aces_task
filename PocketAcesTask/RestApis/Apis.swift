@@ -13,7 +13,7 @@ class Apis {
     static let get = "|GET"
     static let put = "|PUT"
     
-    static let base = "http://newsapi.org/v2"
+    static let base = "https://newsapi.org/v2"
     
     static let allContacts = base + "/top-headlines" + get
     
