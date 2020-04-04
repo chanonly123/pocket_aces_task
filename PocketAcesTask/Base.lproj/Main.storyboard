@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MLh-3n-aAI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8sL-gA-wxp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--Headlines-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PocketAcesTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HeadlinesVC" id="BYZ-38-t0r" customClass="HeadlinesVC" customModule="PocketAcesTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="506" id="Tcg-Hj-Api">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsCell" rowHeight="506" id="Tcg-Hj-Api" customClass="NewsCell" customModule="PocketAcesTask" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="506"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tcg-Hj-Api" id="KhY-LI-0xR">
@@ -28,10 +28,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0e-8O-PCC" customClass="UIViewExtended" customModule="PocketAcesTask" customModuleProvider="target">
-                                                    <rect key="frame" x="12" y="6" width="390" height="463.5"/>
+                                                    <rect key="frame" x="12" y="6" width="390" height="432"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAS-xv-p3B" customClass="UIViewExtended" customModule="PocketAcesTask" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="463.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="432"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="GQE-Tp-VHa">
                                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="292.5"/>
@@ -39,32 +39,45 @@
                                                                         <constraint firstAttribute="width" secondItem="GQE-Tp-VHa" secondAttribute="height" multiplier="4:3" id="Zs7-YN-4eK"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronavirus likely ended record U.S. job growth in March - Reuters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIi-Qi-2JM">
-                                                                    <rect key="frame" x="16" y="308.5" width="358" height="41"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-nI-qJt">
-                                                                    <rect key="frame" x="16" y="357.5" width="358" height="90"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-nI-qJt">
+                                                                    <rect key="frame" x="16" y="308.5" width="358" height="107.5"/>
                                                                     <string key="text">The U.S. economy likely shed jobs in March, abruptly ending a historic 113 straight months of employment growth as stringent measures to control the coronavirus pandemic shuttered businesses and factories, confirming a recession is underway.</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IR-Jb-khq">
+                                                                    <rect key="frame" x="0.0" y="219.5" width="390" height="73"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronavirus likely ended record U.S. job growth in March - Reuters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIi-Qi-2JM">
+                                                                            <rect key="frame" x="16" y="16" width="358" height="41"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="DIi-Qi-2JM" firstAttribute="top" secondItem="1IR-Jb-khq" secondAttribute="top" constant="16" id="4Ox-lR-7Nc"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="DIi-Qi-2JM" secondAttribute="trailing" constant="16" id="A7K-Ez-XYB"/>
+                                                                        <constraint firstItem="DIi-Qi-2JM" firstAttribute="leading" secondItem="1IR-Jb-khq" secondAttribute="leading" constant="16" id="NK8-jX-vOl"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="DIi-Qi-2JM" secondAttribute="bottom" constant="16" id="pCh-xb-ud1"/>
+                                                                    </constraints>
+                                                                </view>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
+                                                                <constraint firstItem="1IR-Jb-khq" firstAttribute="bottom" secondItem="GQE-Tp-VHa" secondAttribute="bottom" id="6dK-BY-8KB"/>
                                                                 <constraint firstAttribute="bottom" secondItem="JvI-nI-qJt" secondAttribute="bottom" constant="16" id="77d-nF-OlY"/>
+                                                                <constraint firstItem="JvI-nI-qJt" firstAttribute="top" secondItem="GQE-Tp-VHa" secondAttribute="bottom" constant="16" id="HIa-sC-gwT"/>
                                                                 <constraint firstAttribute="trailing" secondItem="JvI-nI-qJt" secondAttribute="trailing" constant="16" id="IpF-z0-X8I"/>
-                                                                <constraint firstAttribute="trailing" secondItem="DIi-Qi-2JM" secondAttribute="trailing" constant="16" id="U5V-1w-ja6"/>
+                                                                <constraint firstAttribute="bottom" secondItem="GQE-Tp-VHa" secondAttribute="bottom" priority="500" id="Rqt-vr-3dW"/>
+                                                                <constraint firstItem="1IR-Jb-khq" firstAttribute="trailing" secondItem="GQE-Tp-VHa" secondAttribute="trailing" id="SDB-7t-Olz"/>
                                                                 <constraint firstItem="JvI-nI-qJt" firstAttribute="leading" secondItem="QAS-xv-p3B" secondAttribute="leading" constant="16" id="k3e-LH-rK7"/>
-                                                                <constraint firstItem="DIi-Qi-2JM" firstAttribute="leading" secondItem="QAS-xv-p3B" secondAttribute="leading" constant="16" id="mxK-iA-ZPp"/>
                                                                 <constraint firstItem="GQE-Tp-VHa" firstAttribute="top" secondItem="QAS-xv-p3B" secondAttribute="top" id="rql-hW-7xo"/>
                                                                 <constraint firstItem="GQE-Tp-VHa" firstAttribute="leading" secondItem="QAS-xv-p3B" secondAttribute="leading" id="ry7-Se-LJx"/>
-                                                                <constraint firstItem="JvI-nI-qJt" firstAttribute="top" secondItem="DIi-Qi-2JM" secondAttribute="bottom" constant="8" id="s68-2A-cYK"/>
+                                                                <constraint firstItem="1IR-Jb-khq" firstAttribute="leading" secondItem="GQE-Tp-VHa" secondAttribute="leading" id="xzc-cT-i3s"/>
                                                                 <constraint firstAttribute="trailing" secondItem="GQE-Tp-VHa" secondAttribute="trailing" id="yK4-BU-xgw"/>
-                                                                <constraint firstItem="DIi-Qi-2JM" firstAttribute="top" secondItem="GQE-Tp-VHa" secondAttribute="bottom" constant="16" id="zSr-KD-Lix"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -94,6 +107,13 @@
                                                 <constraint firstItem="c0e-8O-PCC" firstAttribute="leading" secondItem="KhY-LI-0xR" secondAttribute="leading" constant="12" id="UVp-d9-hhL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardView" destination="QAS-xv-p3B" id="OZn-FH-Dn0"/>
+                                            <outlet property="expandHandle" destination="77d-nF-OlY" id="a4n-PA-QgX"/>
+                                            <outlet property="ivImage" destination="GQE-Tp-VHa" id="Xhj-N5-BUW"/>
+                                            <outlet property="lblDesc" destination="JvI-nI-qJt" id="oB4-Nb-Qa9"/>
+                                            <outlet property="lblTitle" destination="DIi-Qi-2JM" id="8Jf-hG-AsT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -108,17 +128,38 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Headlines" id="kG7-9h-zjG"/>
+                    <connections>
+                        <outlet property="tableView" destination="dND-Xa-Br6" id="Sgb-D5-01g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-400.00000000000006" y="862.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2MU-OE-CLD">
+            <objects>
+                <navigationController id="8sL-gA-wxp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ic1-40-OBE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MLh-3n-aAI" kind="relationship" relationship="rootViewController" id="keG-21-Hdt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzc-gv-S4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-625"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ind-8f-GnS">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MLh-3n-aAI" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gFJ-Fj-Qoc"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0FR-g1-njU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -135,7 +176,7 @@
         <!--Countries-->
         <scene sceneID="cSb-Fd-3sa">
             <objects>
-                <viewController id="dlg-Cg-G45" customClass="ViewController" customModule="PocketAcesTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dlg-Cg-G45" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Qf-BY-Fca">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,7 +192,7 @@
         <!--Search-->
         <scene sceneID="fRo-H5-a4y">
             <objects>
-                <viewController id="adg-25-h8E" customClass="ViewController" customModule="PocketAcesTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="adg-25-h8E" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wS9-sD-TWB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,6 +204,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uD5-4N-6ql" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1090" y="863"/>
+        </scene>
+        <!--Countries-->
+        <scene sceneID="3RC-Fa-Fxq">
+            <objects>
+                <viewController storyboardIdentifier="FullNewsVC" id="h5U-PY-9U4" customClass="FullNewsVC" customModule="PocketAcesTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KeC-Q8-6n3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9J-v9-VW8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0d-uF-YhD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="481.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Mh0-8v-Mxq">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Mh0-8v-Mxq" secondAttribute="height" multiplier="4:3" id="00w-YS-fdn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronavirus likely ended record U.S. job growth in March - Reuters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEz-Tk-8gs">
+                                                <rect key="frame" x="16" y="326.5" width="382" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIt-Bm-1V7">
+                                                <rect key="frame" x="16" y="375.5" width="382" height="90"/>
+                                                <string key="text">The U.S. economy likely shed jobs in March, abruptly ending a historic 113 straight months of employment growth as stringent measures to control the coronavirus pandemic shuttered businesses and factories, confirming a recession is underway.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="lEz-Tk-8gs" firstAttribute="top" secondItem="Mh0-8v-Mxq" secondAttribute="bottom" constant="16" id="07T-8W-dCE"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mh0-8v-Mxq" secondAttribute="trailing" id="8rs-HD-zzQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="lEz-Tk-8gs" secondAttribute="trailing" constant="16" id="CtV-To-DQs"/>
+                                            <constraint firstItem="Mh0-8v-Mxq" firstAttribute="top" secondItem="b0d-uF-YhD" secondAttribute="top" id="DOI-ZY-gp1"/>
+                                            <constraint firstAttribute="bottom" secondItem="tIt-Bm-1V7" secondAttribute="bottom" constant="16" id="Uo2-Yw-nxq"/>
+                                            <constraint firstItem="lEz-Tk-8gs" firstAttribute="leading" secondItem="b0d-uF-YhD" secondAttribute="leading" constant="16" id="WE3-z1-7UB"/>
+                                            <constraint firstAttribute="trailing" secondItem="tIt-Bm-1V7" secondAttribute="trailing" constant="16" id="dRW-Rg-buT"/>
+                                            <constraint firstItem="Mh0-8v-Mxq" firstAttribute="leading" secondItem="b0d-uF-YhD" secondAttribute="leading" id="eKh-Ox-7Nn"/>
+                                            <constraint firstItem="tIt-Bm-1V7" firstAttribute="leading" secondItem="b0d-uF-YhD" secondAttribute="leading" constant="16" id="qtH-zS-4s3"/>
+                                            <constraint firstItem="tIt-Bm-1V7" firstAttribute="top" secondItem="lEz-Tk-8gs" secondAttribute="bottom" constant="8" id="uwi-ub-F0s"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="b0d-uF-YhD" firstAttribute="top" secondItem="j9J-v9-VW8" secondAttribute="top" id="0YE-G8-gYH"/>
+                                    <constraint firstAttribute="bottom" secondItem="b0d-uF-YhD" secondAttribute="bottom" id="Kdf-85-kEL"/>
+                                    <constraint firstItem="b0d-uF-YhD" firstAttribute="width" secondItem="j9J-v9-VW8" secondAttribute="width" id="Ose-Ng-b6T"/>
+                                    <constraint firstItem="b0d-uF-YhD" firstAttribute="leading" secondItem="j9J-v9-VW8" secondAttribute="leading" id="jS2-So-T6N"/>
+                                    <constraint firstAttribute="trailing" secondItem="b0d-uF-YhD" secondAttribute="trailing" id="peP-tG-cjv"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="j9J-v9-VW8" secondAttribute="trailing" id="0z5-RA-2ih"/>
+                            <constraint firstItem="j9J-v9-VW8" firstAttribute="leading" secondItem="KeC-Q8-6n3" secondAttribute="leading" id="IB8-Qa-TIZ"/>
+                            <constraint firstItem="NMj-e5-ir0" firstAttribute="bottom" secondItem="j9J-v9-VW8" secondAttribute="bottom" id="PMc-r3-Cgq"/>
+                            <constraint firstItem="j9J-v9-VW8" firstAttribute="top" secondItem="KeC-Q8-6n3" secondAttribute="top" id="vRE-zp-gjS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NMj-e5-ir0"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Countries" id="Y7f-YT-p7M"/>
+                    <navigationItem key="navigationItem" id="eAb-rk-Kl4"/>
+                    <connections>
+                        <outlet property="ivImage" destination="Mh0-8v-Mxq" id="r9P-p6-dGc"/>
+                        <outlet property="lblDesc" destination="tIt-Bm-1V7" id="W0A-Na-Cc9"/>
+                        <outlet property="lblTitle" destination="lEz-Tk-8gs" id="q9J-bC-Ked"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJe-Wl-UuD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="1579.6875"/>
         </scene>
     </scenes>
     <resources>

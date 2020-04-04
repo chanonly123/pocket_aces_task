@@ -42,6 +42,9 @@ class ArticleEntry: Codable {
         case description = "description"
         case source = "source"
     }
+    
+    // others
+    var expanded = true
 }
 
 class SourceEntry: Codable {

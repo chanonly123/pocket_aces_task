@@ -9,23 +9,19 @@
 import UIKit
 
 extension UITableView {
-    func dequeueReusableCell<T: UITableViewCell>(type: T.Type) -> T? {
+    func dequeueReusableCell<T: UITableViewCell>(type: T.Type) -> T {
         let identifier = String(describing: type)
         if let reusableCell = self.dequeueReusableCell(withIdentifier: identifier) {
             if let cell = reusableCell as? T {
                 return cell
             } else {
-                //printc("tableview cell cannot be casted: \(identifier)")
+                assertionFailure("tableview cell cannot be casted: \(identifier)")
             }
         } else {
-            //printc("tableview cell not found: \(identifier)")
+            assertionFailure("tableview cell not found: \(identifier)")
         }
-        guard let tableViewCell = UITableViewCell() as? T else {
-            //fatalError("tableviewcell not found")
-            print("tableviewcell not found")
-            return nil
-        }
-        return tableViewCell
+        assertionFailure("tableviewcell not found")
+        return UITableViewCell() as! T
     }
     
     func register(nibType: AnyClass) {

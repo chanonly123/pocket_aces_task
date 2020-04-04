@@ -18,5 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    static func getNavController() -> UINavigationController? {
+        return (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController as? UINavigationController
+    }
 }
 
+class Storybaords {
+    static var main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil) 
+
+}

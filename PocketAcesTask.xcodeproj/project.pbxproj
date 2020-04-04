@@ -18,7 +18,7 @@
 		1712960B2437321F00092429 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1712960A2437321F00092429 /* LocalData.swift */; };
 		1712960E2437334000092429 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1712960D2437334000092429 /* News.swift */; };
 		1757ACC924372CDB002E028D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACC824372CDB002E028D /* AppDelegate.swift */; };
-		1757ACCD24372CDB002E028D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACCC24372CDB002E028D /* ViewController.swift */; };
+		1757ACCD24372CDB002E028D /* HeadlinesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACCC24372CDB002E028D /* HeadlinesVC.swift */; };
 		1757ACD024372CDB002E028D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1757ACCE24372CDB002E028D /* Main.storyboard */; };
 		1757ACD224372CDC002E028D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1757ACD124372CDC002E028D /* Assets.xcassets */; };
 		1757ACD524372CDC002E028D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1757ACD324372CDC002E028D /* LaunchScreen.storyboard */; };
@@ -28,6 +28,10 @@
 		1757ACF224372FC5002E028D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACED24372FC5002E028D /* BaseViewController.swift */; };
 		1757ACF324372FC5002E028D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACEE24372FC5002E028D /* Utils.swift */; };
 		1757ACF424372FC5002E028D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACEF24372FC5002E028D /* NetworkRequest.swift */; };
+		176C9D442438B65600416D21 /* UIViewTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C9D432438B65600416D21 /* UIViewTapGesture.swift */; };
+		176C9D462438BA9000416D21 /* FullNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C9D452438BA9000416D21 /* FullNewsVC.swift */; };
+		176C9D482438BDA300416D21 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C9D472438BDA300416D21 /* UIImageView.swift */; };
+		176C9D4A2438BE6B00416D21 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C9D492438BE6B00416D21 /* UIView.swift */; };
 		1786C00C2437387A00F88061 /* CustomUIimageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0072437387A00F88061 /* CustomUIimageViews.swift */; };
 		1786C00D2437387A00F88061 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0082437387A00F88061 /* BaseTableViewCell.swift */; };
 		1786C00E2437387A00F88061 /* CustomUIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0092437387A00F88061 /* CustomUIViews.swift */; };
@@ -50,7 +54,7 @@
 		1712960D2437334000092429 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		1757ACC524372CDB002E028D /* PocketAcesTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketAcesTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1757ACC824372CDB002E028D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1757ACCC24372CDB002E028D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1757ACCC24372CDB002E028D /* HeadlinesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesVC.swift; sourceTree = "<group>"; };
 		1757ACCF24372CDB002E028D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1757ACD124372CDC002E028D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1757ACD424372CDC002E028D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +65,10 @@
 		1757ACED24372FC5002E028D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1757ACEE24372FC5002E028D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1757ACEF24372FC5002E028D /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		176C9D432438B65600416D21 /* UIViewTapGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTapGesture.swift; sourceTree = "<group>"; };
+		176C9D452438BA9000416D21 /* FullNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNewsVC.swift; sourceTree = "<group>"; };
+		176C9D472438BDA300416D21 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		176C9D492438BE6B00416D21 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		176E0ECEF9092F8114985044 /* Pods_PocketAcesTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketAcesTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1786C0072437387A00F88061 /* CustomUIimageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIimageViews.swift; sourceTree = "<group>"; };
 		1786C0082437387A00F88061 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +110,8 @@
 				171295F92437309D00092429 /* UITableView.swift */,
 				171295FA2437309D00092429 /* String.swift */,
 				171296082437312800092429 /* UIButton.swift */,
+				176C9D472438BDA300416D21 /* UIImageView.swift */,
+				176C9D492438BE6B00416D21 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,9 +159,9 @@
 				17129601243730B500092429 /* RestApis */,
 				171295F72437309D00092429 /* Extensions */,
 				1757ACEA24372FC5002E028D /* wrappers */,
+				176C9D4B2438BEAB00416D21 /* ViewControllers */,
 				1757ACDE24372E89002E028D /* DevEnv */,
 				1757ACC824372CDB002E028D /* AppDelegate.swift */,
-				1757ACCC24372CDB002E028D /* ViewController.swift */,
 				1757ACCE24372CDB002E028D /* Main.storyboard */,
 				1757ACD124372CDC002E028D /* Assets.xcassets */,
 				1757ACD324372CDC002E028D /* LaunchScreen.storyboard */,
@@ -184,6 +194,15 @@
 			path = wrappers;
 			sourceTree = "<group>";
 		};
+		176C9D4B2438BEAB00416D21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1757ACCC24372CDB002E028D /* HeadlinesVC.swift */,
+				176C9D452438BA9000416D21 /* FullNewsVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		1786C0062437387A00F88061 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +212,7 @@
 				1786C00A2437387A00F88061 /* UserClusterView.swift */,
 				1786C00B2437387A00F88061 /* CustomUIButtons.swift */,
 				1786C011243738A600F88061 /* EmptyView.swift */,
+				176C9D432438B65600416D21 /* UIViewTapGesture.swift */,
 			);
 			name = CustomViews;
 			path = "../../eezylife-sample/eezylife-sample/CustomViews";
@@ -323,10 +343,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				17129606243730B500092429 /* RestApi.swift in Sources */,
-				1757ACCD24372CDB002E028D /* ViewController.swift in Sources */,
+				176C9D482438BDA300416D21 /* UIImageView.swift in Sources */,
+				1757ACCD24372CDB002E028D /* HeadlinesVC.swift in Sources */,
 				1786C0102437387A00F88061 /* CustomUIButtons.swift in Sources */,
 				1786C00E2437387A00F88061 /* CustomUIViews.swift in Sources */,
 				171295FE2437309D00092429 /* UIColor.swift in Sources */,
+				176C9D442438B65600416D21 /* UIViewTapGesture.swift in Sources */,
 				1757ACF024372FC5002E028D /* Observer.swift in Sources */,
 				171296002437309D00092429 /* String.swift in Sources */,
 				1757ACF424372FC5002E028D /* NetworkRequest.swift in Sources */,
@@ -335,6 +357,7 @@
 				17129607243730B500092429 /* NewsApi.swift in Sources */,
 				1786C012243738A600F88061 /* EmptyView.swift in Sources */,
 				1786C00C2437387A00F88061 /* CustomUIimageViews.swift in Sources */,
+				176C9D462438BA9000416D21 /* FullNewsVC.swift in Sources */,
 				1757ACC924372CDB002E028D /* AppDelegate.swift in Sources */,
 				1712960B2437321F00092429 /* LocalData.swift in Sources */,
 				171295FF2437309D00092429 /* UITableView.swift in Sources */,
@@ -343,6 +366,7 @@
 				1786C01624373B5600F88061 /* BaseTableViewController.swift in Sources */,
 				1757ACDD24372E58002E028D /* DevEnv.swift in Sources */,
 				1786C00F2437387A00F88061 /* UserClusterView.swift in Sources */,
+				176C9D4A2438BE6B00416D21 /* UIView.swift in Sources */,
 				1757ACF224372FC5002E028D /* BaseViewController.swift in Sources */,
 				1712960E2437334000092429 /* News.swift in Sources */,
 				171296092437312800092429 /* UIButton.swift in Sources */,

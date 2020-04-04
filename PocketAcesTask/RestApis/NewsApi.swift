@@ -10,8 +10,8 @@ import Foundation
 
 class NewsApi {
     
-    static func getTopHeadline(handler: @escaping ResponseHandler<NewsTopHeadlinesData>) {
-        RestApi.call(url: Apis.allContacts, params: ["apiKey": EnvDev.newsapiKey, "country": "us"], handler: handler)
+    static func getTopHeadline(page: Int, handler: @escaping ResponseHandler<NewsTopHeadlinesData>) {
+        RestApi.call(url: Apis.allContacts, params: ["apiKey": EnvDev.newsapiKey, "country": "us", "page": page, "pageSize": 10], handler: handler)
     }
     
     /*static func editContacts(id: Int64, contact: ContactEntry, handler: @escaping ResponseHandler<UserContactData>) {
