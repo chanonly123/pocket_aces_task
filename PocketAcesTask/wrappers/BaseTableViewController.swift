@@ -45,6 +45,28 @@ class BaseTableViewController: BaseViewController {
             refreshControl.endRefreshing()
         }
     }
+    
+    // MARK: Next page loading footer
+    var showLoadingFooter: Bool = false {
+        didSet {
+            if showLoadingFooter {
+                let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
+                view.backgroundColor = .white
+                let activity = UIActivityIndicatorView(style: .gray)
+                activity.translatesAutoresizingMaskIntoConstraints = false
+                activity.hidesWhenStopped = true
+                activity.startAnimating()
+                view.addSubview(activity)
+                activity.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+                activity.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+                tableView.tableFooterView = view
+                tableView.sectionFooterHeight = 50
+            } else {
+                tableView.tableFooterView = UIView()
+                tableView.sectionFooterHeight = 0
+            }
+        }
+    }
 }
 
 extension BaseTableViewController: UITableViewDataSource {

@@ -22,11 +22,14 @@ class HeadlinesVC: BaseTableViewController {
             
             if self.paginator.items.isEmpty {
                 self.activityIndicator.startAnimating()
+            } else {
+                self.showLoadingFooter = true
             }
             
             NewsApi.getTopHeadline(page: page) { (res, data) in
                 self.paginator.nextPageCompletion(success: res.succ, nextItems: data?.articles ?? [], callIndex: callIndex)
                 self.endRefreshing()
+                self.showLoadingFooter = false
                 self.tableView.reloadData()
             }
         }

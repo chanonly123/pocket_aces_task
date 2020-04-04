@@ -147,10 +147,33 @@ class BaseViewController: UIViewController {
     // can override
     @objc func tapNavLeft() {  }
     
+    // MARK: search controller functions
+    lazy var searchController = UISearchController(searchResultsController:  nil)
+    func addSearchBar() {
+        searchController.searchResultsUpdater = self
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = true
+        navigationItem.titleView = searchController.searchBar
+        definesPresentationContext = true
+    }
+    
+    // can override
+    func searchTextChanged(searchText: String) {}
+    
     // MARK: deinit
     deinit {
         print("======= deinit \(String(describing: self))")
     }
-
     
+}
+
+extension BaseViewController: UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchTextChanged(searchText: searchText)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {}
 }

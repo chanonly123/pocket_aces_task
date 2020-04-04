@@ -14,8 +14,9 @@ class NewsApi {
         RestApi.call(url: Apis.allContacts, params: ["apiKey": EnvDev.newsapiKey, "country": "us", "page": page, "pageSize": 10], handler: handler)
     }
     
-    /*static func editContacts(id: Int64, contact: ContactEntry, handler: @escaping ResponseHandler<UserContactData>) {
-        RestApi.call(url: Apis.editContact.replacingOccurrences(of: "{id}", with: String(id)), params: contact.toJSON(), handler: handler)
-    }*/
+    static func search(query: String, page: Int, handler: @escaping ResponseHandler<NewsTopHeadlinesData>) {
+        RestApi.call(url: Apis.allContacts, params: ["apiKey": EnvDev.newsapiKey, "country": "us", "page": page, "pageSize": 10], handler: handler)
+    }
+
     
 }

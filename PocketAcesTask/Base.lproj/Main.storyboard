@@ -39,7 +39,7 @@
                                                                         <constraint firstAttribute="width" secondItem="GQE-Tp-VHa" secondAttribute="height" multiplier="4:3" id="Zs7-YN-4eK"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-nI-qJt">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-nI-qJt">
                                                                     <rect key="frame" x="16" y="308.5" width="358" height="107.5"/>
                                                                     <string key="text">The U.S. economy likely shed jobs in March, abruptly ending a historic 113 straight months of employment growth as stringent measures to control the coronavirus pandemic shuttered businesses and factories, confirming a recession is underway.</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -47,7 +47,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IR-Jb-khq">
-                                                                    <rect key="frame" x="0.0" y="219.5" width="390" height="73"/>
+                                                                    <rect key="frame" x="0.0" y="189.5" width="390" height="103"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronavirus likely ended record U.S. job growth in March - Reuters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIi-Qi-2JM">
                                                                             <rect key="frame" x="16" y="16" width="358" height="41"/>
@@ -55,20 +55,34 @@
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHk-f0-wQ0">
+                                                                            <rect key="frame" x="0.0" y="57" width="390" height="46"/>
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                            <inset key="contentEdgeInsets" minX="16" minY="12" maxX="16" maxY="16"/>
+                                                                            <state key="normal" title="Read more">
+                                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </state>
+                                                                            <connections>
+                                                                                <action selector="actionFullStory" destination="Tcg-Hj-Api" eventType="touchUpInside" id="aLx-V9-StG"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="DIi-Qi-2JM" firstAttribute="top" secondItem="1IR-Jb-khq" secondAttribute="top" constant="16" id="4Ox-lR-7Nc"/>
+                                                                        <constraint firstItem="uHk-f0-wQ0" firstAttribute="top" secondItem="DIi-Qi-2JM" secondAttribute="bottom" id="56l-2V-jFN"/>
+                                                                        <constraint firstItem="uHk-f0-wQ0" firstAttribute="leading" secondItem="1IR-Jb-khq" secondAttribute="leading" id="6ip-BE-RP3"/>
                                                                         <constraint firstAttribute="trailing" secondItem="DIi-Qi-2JM" secondAttribute="trailing" constant="16" id="A7K-Ez-XYB"/>
                                                                         <constraint firstItem="DIi-Qi-2JM" firstAttribute="leading" secondItem="1IR-Jb-khq" secondAttribute="leading" constant="16" id="NK8-jX-vOl"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="DIi-Qi-2JM" secondAttribute="bottom" constant="16" id="pCh-xb-ud1"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="uHk-f0-wQ0" secondAttribute="trailing" id="bje-aK-e2Y"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="uHk-f0-wQ0" secondAttribute="bottom" id="p5G-pO-g75"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="1IR-Jb-khq" firstAttribute="bottom" secondItem="GQE-Tp-VHa" secondAttribute="bottom" id="6dK-BY-8KB"/>
-                                                                <constraint firstAttribute="bottom" secondItem="JvI-nI-qJt" secondAttribute="bottom" constant="16" id="77d-nF-OlY"/>
+                                                                <constraint firstAttribute="bottom" secondItem="JvI-nI-qJt" secondAttribute="bottom" priority="900" constant="16" id="77d-nF-OlY"/>
                                                                 <constraint firstItem="JvI-nI-qJt" firstAttribute="top" secondItem="GQE-Tp-VHa" secondAttribute="bottom" constant="16" id="HIa-sC-gwT"/>
                                                                 <constraint firstAttribute="trailing" secondItem="JvI-nI-qJt" secondAttribute="trailing" constant="16" id="IpF-z0-X8I"/>
                                                                 <constraint firstAttribute="bottom" secondItem="GQE-Tp-VHa" secondAttribute="bottom" priority="500" id="Rqt-vr-3dW"/>
@@ -127,7 +141,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Headlines" id="kG7-9h-zjG"/>
+                    <tabBarItem key="tabBarItem" title="Headlines" image="tab_globe" id="kG7-9h-zjG"/>
                     <connections>
                         <outlet property="tableView" destination="dND-Xa-Br6" id="Sgb-D5-01g"/>
                     </connections>
@@ -183,7 +197,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ZYr-73-Zvm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Countries" id="4kz-uJ-QNO"/>
+                    <tabBarItem key="tabBarItem" title="Countries" image="tab_headline" id="4kz-uJ-QNO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmR-O6-3LI" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,18 +206,106 @@
         <!--Search-->
         <scene sceneID="fRo-H5-a4y">
             <objects>
-                <viewController id="adg-25-h8E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchNewsVC" id="adg-25-h8E" customClass="SearchNewsVC" customModule="PocketAcesTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wS9-sD-TWB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gew-Oo-NGa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchNewsCell" rowHeight="117" id="4QH-RT-bAo" customClass="SearchNewsCell" customModule="PocketAcesTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="117"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4QH-RT-bAo" id="W9b-BO-4ov">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZyT-2n-HuZ" customClass="UIViewExtended" customModule="PocketAcesTask" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="6" width="390" height="83.5"/>
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TqM-De-cbP" customClass="UIViewExtended" customModule="PocketAcesTask" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="83.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ZY7-g8-EfZ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="111.5" height="83.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="ZY7-g8-EfZ" secondAttribute="height" multiplier="4:3" id="ac3-tj-fxp"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronavirus likely ended record U.S. job growth in March - Reuters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-mE-CXF">
+                                                                    <rect key="frame" x="123.5" y="8" width="258.5" height="61"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="ZY7-g8-EfZ" firstAttribute="top" secondItem="TqM-De-cbP" secondAttribute="top" id="4uE-ki-51m"/>
+                                                                <constraint firstItem="zUU-mE-CXF" firstAttribute="top" secondItem="TqM-De-cbP" secondAttribute="top" constant="8" id="Njm-6K-Uhh"/>
+                                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zUU-mE-CXF" secondAttribute="bottom" constant="8" id="Rlh-uU-xug"/>
+                                                                <constraint firstAttribute="trailing" secondItem="zUU-mE-CXF" secondAttribute="trailing" constant="8" id="bFc-S1-Csh"/>
+                                                                <constraint firstItem="ZY7-g8-EfZ" firstAttribute="width" secondItem="TqM-De-cbP" secondAttribute="width" multiplier="1:3.5" id="fpr-wD-twb"/>
+                                                                <constraint firstItem="zUU-mE-CXF" firstAttribute="leading" secondItem="ZY7-g8-EfZ" secondAttribute="trailing" constant="12" id="hDp-qT-oC7"/>
+                                                                <constraint firstItem="ZY7-g8-EfZ" firstAttribute="leading" secondItem="TqM-De-cbP" secondAttribute="leading" id="tzR-rF-CY2"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ZY7-g8-EfZ" secondAttribute="bottom" id="wnG-1p-AYD"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="TqM-De-cbP" firstAttribute="top" secondItem="ZyT-2n-HuZ" secondAttribute="top" id="2Ig-tp-LAc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TqM-De-cbP" secondAttribute="trailing" id="Kh0-93-IAI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TqM-De-cbP" secondAttribute="bottom" id="Nqv-lF-kI5"/>
+                                                        <constraint firstItem="TqM-De-cbP" firstAttribute="leading" secondItem="ZyT-2n-HuZ" secondAttribute="leading" id="OHn-qZ-bCI"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowLevel">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZyT-2n-HuZ" firstAttribute="leading" secondItem="W9b-BO-4ov" secondAttribute="leading" constant="12" id="2r2-Rk-lAa"/>
+                                                <constraint firstItem="ZyT-2n-HuZ" firstAttribute="top" secondItem="W9b-BO-4ov" secondAttribute="top" constant="6" id="P7g-As-eou"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZyT-2n-HuZ" secondAttribute="trailing" constant="12" id="esV-Nc-iwT"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZyT-2n-HuZ" secondAttribute="bottom" constant="6" id="jkx-Df-Oq2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardView" destination="TqM-De-cbP" id="jYD-3Y-R6u"/>
+                                            <outlet property="ivImage" destination="ZY7-g8-EfZ" id="dCO-Fx-Zor"/>
+                                            <outlet property="lblTitle" destination="zUU-mE-CXF" id="ZP4-B3-IRk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gew-Oo-NGa" firstAttribute="trailing" secondItem="zGq-KV-3Q6" secondAttribute="trailing" id="Gdk-UH-yxp"/>
+                            <constraint firstItem="gew-Oo-NGa" firstAttribute="top" secondItem="wS9-sD-TWB" secondAttribute="top" id="HWF-YT-IRJ"/>
+                            <constraint firstAttribute="bottom" secondItem="gew-Oo-NGa" secondAttribute="bottom" id="e2g-8N-aXs"/>
+                            <constraint firstItem="gew-Oo-NGa" firstAttribute="leading" secondItem="zGq-KV-3Q6" secondAttribute="leading" id="ye0-AA-jIy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zGq-KV-3Q6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="3wU-KI-4EX"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="tab_search" id="3wU-KI-4EX"/>
+                    <connections>
+                        <outlet property="tableView" destination="gew-Oo-NGa" id="aTl-EO-lNq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uD5-4N-6ql" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="863"/>
+            <point key="canvasLocation" x="1089.8550724637682" y="862.5"/>
         </scene>
         <!--Countries-->
         <scene sceneID="3RC-Fa-Fxq">
@@ -286,6 +388,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="tab_globe" width="30" height="30"/>
+        <image name="tab_headline" width="30" height="30"/>
+        <image name="tab_search" width="30" height="30"/>
         <image name="test1.jpeg" width="1200" height="800"/>
     </resources>
 </document>
