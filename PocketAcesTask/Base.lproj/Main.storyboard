@@ -31,6 +31,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Headlines" image="tab_globe" id="kG7-9h-zjG"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="dND-Xa-Br6" id="Sgb-D5-01g"/>
                     </connections>
@@ -185,6 +188,9 @@
                         <viewLayoutGuide key="safeArea" id="zGq-KV-3Q6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="tab_search" id="3wU-KI-4EX"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="gew-Oo-NGa" id="aTl-EO-lNq"/>
                     </connections>
@@ -218,6 +224,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade translate(0, 150)"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIt-Bm-1V7">
                                                 <rect key="frame" x="16" y="375.5" width="382" height="90"/>
@@ -225,6 +234,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade translate(0, 150)"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -239,6 +251,9 @@
                                             <constraint firstItem="tIt-Bm-1V7" firstAttribute="leading" secondItem="b0d-uF-YhD" secondAttribute="leading" constant="16" id="qtH-zS-4s3"/>
                                             <constraint firstItem="tIt-Bm-1V7" firstAttribute="top" secondItem="lEz-Tk-8gs" secondAttribute="bottom" constant="8" id="uwi-ub-F0s"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -249,19 +264,43 @@
                                     <constraint firstAttribute="trailing" secondItem="b0d-uF-YhD" secondAttribute="trailing" id="peP-tG-cjv"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ve-VQ-HlQ" customClass="UIButtonExtended" customModule="PocketAcesTask" customModuleProvider="target">
+                                <rect key="frame" x="360.5" y="52" width="45.5" height="45.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.4042701198630137" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5ve-VQ-HlQ" secondAttribute="height" id="r1Z-Zo-6iy"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                                <state key="normal" image="delete.left" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ht_dismiss:" destination="h5U-PY-9U4" eventType="touchUpInside" id="748-Ak-lp1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="j9J-v9-VW8" secondAttribute="trailing" id="0z5-RA-2ih"/>
+                            <constraint firstItem="5ve-VQ-HlQ" firstAttribute="top" secondItem="NMj-e5-ir0" secondAttribute="top" constant="8" id="1la-hK-Gcj"/>
                             <constraint firstItem="j9J-v9-VW8" firstAttribute="leading" secondItem="KeC-Q8-6n3" secondAttribute="leading" id="IB8-Qa-TIZ"/>
                             <constraint firstItem="NMj-e5-ir0" firstAttribute="bottom" secondItem="j9J-v9-VW8" secondAttribute="bottom" id="PMc-r3-Cgq"/>
                             <constraint firstItem="b0d-uF-YhD" firstAttribute="top" secondItem="Mh0-8v-Mxq" secondAttribute="top" id="hft-Il-v4k"/>
                             <constraint firstItem="j9J-v9-VW8" firstAttribute="top" secondItem="KeC-Q8-6n3" secondAttribute="top" id="vRE-zp-gjS"/>
+                            <constraint firstItem="NMj-e5-ir0" firstAttribute="trailing" secondItem="5ve-VQ-HlQ" secondAttribute="trailing" constant="8" id="wIb-Iy-b63"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NMj-e5-ir0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Countries" id="Y7f-YT-p7M"/>
                     <navigationItem key="navigationItem" id="eAb-rk-Kl4"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="ivImage" destination="Mh0-8v-Mxq" id="r9P-p6-dGc"/>
                         <outlet property="lblDesc" destination="tIt-Bm-1V7" id="W0A-Na-Cc9"/>
@@ -311,6 +350,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="cascade"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -354,6 +396,9 @@
                         <viewLayoutGuide key="safeArea" id="BTK-2D-geY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Headlines" image="tab_globe" id="4JF-LC-UtX"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="7Va-hT-BNe" id="7kv-R5-whm"/>
                     </connections>
@@ -364,6 +409,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="delete.left" catalog="system" width="64" height="52"/>
         <image name="tab_globe" width="30" height="30"/>
         <image name="tab_headline" width="30" height="30"/>
         <image name="tab_search" width="30" height="30"/>

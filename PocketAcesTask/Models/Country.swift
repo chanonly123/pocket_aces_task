@@ -33,8 +33,8 @@ class CountryEntry: Codable, Equatable {
     
     static func createMyCountry() -> CountryEntry {
         let country = CountryEntry()
-        country.name = "India"
-        country.code = "IN"
+        country.code = Locale.current.regionCode ?? "IN"
+        country.name = Locale.current.localizedString(forRegionCode: country.code ?? "IN") ?? "India"
         return country
     }
 }

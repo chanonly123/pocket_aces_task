@@ -18,7 +18,7 @@ class NewsApi {
         case .source(let source):
             params["sources"] = source.id ?? ""
         }
-        RestApi.call(url: Apis.topHeadlines, params: params, handler: handler)
+        RestApi.call(url: Apis.topHeadlines, params: params, handler: handler, returnCache: true)
     }
     
     static func getSearchEverything(query: String, page: Int, handler: @escaping ResponseHandler<NewsTopHeadlinesData>) {
@@ -26,7 +26,7 @@ class NewsApi {
     }
 
     static func getAllSources(country: CountryEntry, handler: @escaping ResponseHandler<SourcesData>) {
-        RestApi.call(url: Apis.allSources, params: ["apiKey": EnvDev.newsapiKey, "country": country.code ?? ""], handler: handler)
+        RestApi.call(url: Apis.allSources, params: ["apiKey": EnvDev.newsapiKey, "country": country.code ?? ""], handler: handler, returnCache: true)
     }
 }
 

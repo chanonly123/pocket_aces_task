@@ -44,7 +44,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rP-FK-lNN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rP-FK-lNN">
                                                 <rect key="frame" x="0.0" y="57" width="390" height="46"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <inset key="contentEdgeInsets" minX="16" minY="12" maxX="16" maxY="16"/>
@@ -101,6 +101,7 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowLevel">
                                 <real key="value" value="4"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="card_view"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>

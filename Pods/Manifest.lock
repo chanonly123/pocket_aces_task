@@ -1,22 +1,22 @@
 PODS:
-  - AutoKeyboard (1.4.4)
+  - Hero (1.5.0)
   - Kingfisher (5.13.2):
     - Kingfisher/Core (= 5.13.2)
   - Kingfisher/Core (5.13.2)
 
 DEPENDENCIES:
-  - AutoKeyboard
+  - Hero
   - Kingfisher
 
 SPEC REPOS:
   trunk:
-    - AutoKeyboard
+    - Hero
     - Kingfisher
 
 SPEC CHECKSUMS:
-  AutoKeyboard: b8758c96fce388d4c6ad7dc984256d67c4e4968d
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
 
-PODFILE CHECKSUM: 72e8cb57350bc7091a4fc5b14b62a96cfe4d30cb
+PODFILE CHECKSUM: 2cdbcf233679ad95cc6e9e0011eb4815fca8844f
 
 COCOAPODS: 1.8.4

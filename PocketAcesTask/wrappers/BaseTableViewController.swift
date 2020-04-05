@@ -144,12 +144,16 @@ class Paginator<T> {
             items.removeAll()
         }
         if nextItems.isEmpty {
-            page = -1 // marks end of page
+            if success {
+                page = -1 // marks end of page
+            }
         } else {
             page += 1
             items.append(contentsOf: nextItems)
         }
-        isGettingData = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.isGettingData = false
+        }
     }
 }
 

@@ -17,13 +17,10 @@ class SearchNewsVC: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myEnableAutoKeyboardObserver = true
         
         addPullToRefresh()
         addSearchBar()
-        
-        setNavRighButton(title: "Cancel")
-        
+                
         setupPaginator()
     }
     
@@ -83,12 +80,20 @@ class SearchNewsVC: BaseTableViewController {
     var searchIndex = 0
     override func searchTextChanged(searchText: String) {
         searchIndex += 1
-        self.searchText = searchText.split(separator: " ").joined(separator: " ")
-        if self.searchText.isEmpty { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [thisSearchIndex = searchIndex] in
             if self.searchIndex != thisSearchIndex { return }
+            self.searchText = searchText.split(separator: " ").joined(separator: " ")
+            if self.searchText.isEmpty { return }
             self.paginator.getNextPage(fromStart: true)
         }
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        setNavRighButton(title: "Cancel")
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = nil
     }
     
 }
@@ -103,10 +108,16 @@ class SearchNewsCell: BaseTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        ivImage.heroID = getRandomHeroId
+        
         cardView.onTap() { [weak self] _ in
+            guard let `self` = self else { return }
             let viewc = FullNewsVC.instantiate()
-            viewc.article = self?.article
-            self?.getViewController()?.show(viewc, sender: nil)
+            viewc.article = self.article
+            viewc.inputImageHeroId = self.ivImage.heroID ?? ""
+            viewc.modalPresentationStyle = .fullScreen
+            self.getViewController()?.present(viewc, animated: true)
         }
     }
     

@@ -1,4 +1,4 @@
-framework module Pods_PocketAcesTask {
+module Pods_PocketAcesTask {
   umbrella header "Pods-PocketAcesTask-umbrella.h"
 
   export *

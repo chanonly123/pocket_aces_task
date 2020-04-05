@@ -20,6 +20,7 @@ class HeadlineCell: BaseTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        ivImage.heroID = getRandomHeroId
         cardView.onTap(exclude: [UIControl.self]) { [weak self] _ in
             guard let article = self?.article else { return }
             article.expanded = !article.expanded
@@ -41,7 +42,9 @@ class HeadlineCell: BaseTableViewCell {
     @IBAction func actionFullStory() {
         let viewc = FullNewsVC.instantiate()
         viewc.article = article
-        getViewController()?.show(viewc, sender: nil)
+        viewc.inputImageHeroId = ivImage.heroID ?? ""
+        viewc.modalPresentationStyle = .fullScreen
+        getViewController()?.present(viewc, animated: true)
     }
     
     func toggle(expand: Bool, animated: Bool) {

@@ -31,19 +31,19 @@ public class NetworkRequest {
         }
         
         var urlRequest = URLRequest(url: url)
-        //var urlRequestForCache = URLRequest(url: url)
+        var urlRequestForCache = URLRequest(url: url)
         
         if method == .POST || method == .PUT || method == .DELETE {
             
         } else if method == .GET {
             guard var comps = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-                //printc("cannot create URLComponents")
+                print("cannot create URLComponents")
                 return
             }
             comps.queryItems = params.compactMap({ URLQueryItem(name: $0.key, value: String(describing: $0.value)) })
             if let newUrl = comps.url {
                 urlRequest = URLRequest(url: newUrl)
-                //urlRequestForCache = URLRequest(url: newUrl)
+                urlRequestForCache = URLRequest(url: newUrl)
             } else {
                 print("cannot create url from query items")
             }
@@ -63,7 +63,14 @@ public class NetworkRequest {
         let task = getSession().dataTask(with: urlRequest) { [weak self] data, res, error in
             self?.logging(url: urlString, requestHeaders: requestHeaders, params: params, data: data)
             guard let `self` = self else { return }
-            self.callCompletion(data: data, res: res, error: error, handler: handler)
+            if returnCache, res == nil, let found = URLCache.shared.cachedResponse(for: urlRequestForCache) {
+                self.callCompletion(data: found.data, res: nil, error: nil, handler: handler)
+            } else {
+                self.callCompletion(data: data, res: res, error: error, handler: handler)
+                if returnCache, let data = data, let res = res {
+                    URLCache.shared.storeCachedResponse(CachedURLResponse(response: res, data: data), for: urlRequestForCache)
+                }
+            }
         }
         task.resume()
     }

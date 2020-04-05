@@ -14,7 +14,7 @@ class TabBarVC: UITabBarController {
         super.viewDidLoad()
         
         viewControllers = viewControllers?.map({
-            UINavigationController(rootViewController: $0)
+            NavController(rootViewController: $0)
         })
         
     }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AutoKeyboard
 
 class BaseViewController: UIViewController {
         
@@ -20,9 +19,7 @@ class BaseViewController: UIViewController {
             view.isUserInteractionEnabled = !isProgress
         }
     }
-    
-    var isVisible: Bool = false
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,29 +50,11 @@ class BaseViewController: UIViewController {
             viewDidAppearFirstTimeCalled = true
             viewDidAppearFirstTime()
         }
-        isVisible = true
     }
     
     // can override
     private var viewDidAppearFirstTimeCalled = false
     func viewDidAppearFirstTime() {}
-    
-    // MARK: Auto keyboard oberverver
-    var myEnableAutoKeyboardObserver = false
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if myEnableAutoKeyboardObserver {
-            registerAutoKeyboard()
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        isVisible = false
-        if myEnableAutoKeyboardObserver {
-            unRegisterAutoKeyboard()
-        }
-    }
     
     // MARK: status bar style override
     var myStatusBarStyleLight: Bool? {

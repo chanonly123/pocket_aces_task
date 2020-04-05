@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class FullNewsVC: BaseViewController, UIScrollViewDelegate {
     override class var fromStoryboard: UIStoryboard? { return Storybaords.main }
@@ -17,9 +18,12 @@ class FullNewsVC: BaseViewController, UIScrollViewDelegate {
     @IBOutlet weak var lblDesc: UILabel!
     
     var article: ArticleEntry?
+    var inputImageHeroId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ivImage.heroID = inputImageHeroId
         
         scrollView.delegate = self
         adjustScrollViewInsets(scrollView)
@@ -34,7 +38,7 @@ class FullNewsVC: BaseViewController, UIScrollViewDelegate {
     func reloadViews() {
         guard let article = article else { return }
         lblTitle.text = article.title
-        lblDesc.text = article.content
+        lblDesc.text = "\(article.content ?? "")\n\(article.content ?? "")\n\(article.content ?? "")\n\(article.content ?? "")"
         if let source = article.source?.name {
             lblDesc.text = lblDesc.text?.appending("\n\nSource: \(source)")
         }
