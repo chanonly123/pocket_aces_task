@@ -86,6 +86,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="touchFeedback" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>

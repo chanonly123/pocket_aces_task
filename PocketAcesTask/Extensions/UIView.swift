@@ -47,4 +47,67 @@ extension UIView {
         }
         return nextResponder as? UIViewController
     }
+    
+    // MARK: touch feedback
+    func enableTouchFeedback(enable: Bool, touchHandler: ((Bool, UIView)->Void)?) {
+        if !enable {
+            savedTouchHandlers.removeObject(forKey: self)
+            gestureRecognizers?.removeAll(where: { $0 is TouchGestureRecognizer })
+            return
+        }
+        savedTouchHandlers.setObject(touchHandler as AnyObject, forKey: self)
+        if gestureRecognizers?.first(where: { $0 is TouchGestureRecognizer }) == nil {
+            let touch = TouchGestureRecognizer(target: self, action: #selector(onTouch(gesture:)))
+            touch.cancelsTouchesInView = false
+            addGestureRecognizer(touch)
+        }
+    }
+    
+    @objc func onTouch(gesture: UIGestureRecognizer) {
+        let down = gesture.state == .began || gesture.state == .changed
+        if let handler = savedTouchHandlers.object(forKey: self) as? ((Bool, UIView)->Void) {
+            handler(down, self)
+        } else {
+            let transform = down ? CGAffineTransform(scaleX: 0.97, y: 0.97) : .identity
+            if down {
+                UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, options: [.allowUserInteraction], animations: {
+                    self.transform = transform
+                }, completion: nil)
+            } else {
+                UIView.animate(withDuration: 0.25, delay: 0.0, options: [.allowUserInteraction, .curveEaseOut], animations: {
+                    self.transform = transform
+                })
+            }
+        }
+    }
+}
+
+fileprivate var savedTouchHandlers = NSMapTable<UIView, AnyObject>(keyOptions: .weakMemory, valueOptions: .strongMemory)
+
+fileprivate class TouchGestureRecognizer: UIGestureRecognizer, UIGestureRecognizerDelegate {
+    override init(target: Any?, action: Selector?) {
+        super.init(target: target, action: action)
+        delegate = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
+        state = .began
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
+        state = .changed
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
+        state = .ended
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent) {
+        state = .cancelled
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return !(otherGestureRecognizer is TouchGestureRecognizer)
+    }
+    
 }
