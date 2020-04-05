@@ -49,8 +49,16 @@ class BaseViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if !viewDidAppearFirstTimeCalled {
+            viewDidAppearFirstTimeCalled = true
+            viewDidAppearFirstTime()
+        }
         isVisible = true
     }
+    
+    // can override
+    private var viewDidAppearFirstTimeCalled = false
+    func viewDidAppearFirstTime() {}
     
     // MARK: Auto keyboard oberverver
     var myEnableAutoKeyboardObserver = false
@@ -147,20 +155,38 @@ class BaseViewController: UIViewController {
     // can override
     @objc func tapNavLeft() {  }
     
-    // MARK: search controller functions
-    lazy var searchController = UISearchController(searchResultsController:  nil)
+    // MARK: search controller functions    
+    lazy var searchBar = UISearchBar(frame: CGRect.zero)
+    
     func addSearchBar() {
-        searchController.searchResultsUpdater = self
-        searchController.delegate = self
-        searchController.searchBar.delegate = self
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = true
-        navigationItem.titleView = searchController.searchBar
-        definesPresentationContext = true
+        searchBar.placeholder = "Search"
+        navigationItem.titleView = searchBar
+        searchBar.delegate = self
+        searchBar.sizeToFit()
     }
     
     // can override
     func searchTextChanged(searchText: String) {}
+    
+    // MARK: Child viewcontrolls
+    func replace(viewc: UIViewController, container: UIView) {
+        children.forEach {
+            $0.view.removeFromSuperview()
+            $0.removeFromParent()
+        }
+        container.addSubview(viewc.view)
+        viewc.view.frame = view.frame
+        viewc.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addChild(viewc)
+    }
+    
+    // MARK: Adjust scrollview content inset manualy
+    func adjustScrollViewInsets(_ scrollView: UIScrollView) {
+        let top = (navigationController?.navigationBar.frame.origin.y ?? 0) + (navigationController?.navigationBar.frame.height ?? 0)
+        let bottom = tabBarController?.tabBar.frame.height ?? 0
+        scrollView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: bottom, right: 0)
+        scrollView.scrollIndicatorInsets = scrollView.contentInset
+    }
     
     // MARK: deinit
     deinit {
@@ -169,11 +195,10 @@ class BaseViewController: UIViewController {
     
 }
 
-extension BaseViewController: UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+extension BaseViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchTextChanged(searchText: searchText)
     }
     
-    func updateSearchResults(for searchController: UISearchController) {}
 }

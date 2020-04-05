@@ -15,6 +15,8 @@ class Apis {
     
     static let base = "https://newsapi.org/v2"
     
-    static let allContacts = base + "/top-headlines" + get
+    static let topHeadlines = base + "/top-headlines" + get
+    static let searchEverything = base + "/everything" + get
+    static let allSources = base + "/sources" + get
     
 }

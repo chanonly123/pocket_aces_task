@@ -17,10 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-
-    static func getNavController() -> UINavigationController? {
-        return (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController as? UINavigationController
-    }
 }
 
 class Storybaords {

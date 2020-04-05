@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SourceCell" rowHeight="506" id="DNH-jr-mrp" customClass="SourceCell" customModule="PocketAcesTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="506"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNH-jr-mrp" id="miP-p1-NvP">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="506"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2y-M7-dkt" customClass="UIViewExtended" customModule="PocketAcesTask" customModuleProvider="target">
+                        <rect key="frame" x="12" y="6" width="390" height="196.5"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsl-PU-5xQ" customClass="UIViewExtended" customModule="PocketAcesTask" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="196.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIl-yj-BZL">
+                                        <rect key="frame" x="16" y="73" width="358" height="107.5"/>
+                                        <string key="text">The U.S. economy likely shed jobs in March, abruptly ending a historic 113 straight months of employment growth as stringent measures to control the coronavirus pandemic shuttered businesses and factories, confirming a recession is underway.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronavirus likely ended record U.S. job growth in March - Reuters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-1u-TeP">
+                                        <rect key="frame" x="16" y="17" width="358" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="qIl-yj-BZL" firstAttribute="leading" secondItem="nsl-PU-5xQ" secondAttribute="leading" constant="16" id="NJl-tG-riJ"/>
+                                    <constraint firstItem="Znh-1u-TeP" firstAttribute="top" secondItem="nsl-PU-5xQ" secondAttribute="top" constant="17" id="QpB-Cg-4aO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Znh-1u-TeP" secondAttribute="trailing" constant="16" id="XsR-z8-VmX"/>
+                                    <constraint firstAttribute="trailing" secondItem="qIl-yj-BZL" secondAttribute="trailing" constant="16" id="bgd-vs-5Go"/>
+                                    <constraint firstItem="qIl-yj-BZL" firstAttribute="top" secondItem="Znh-1u-TeP" secondAttribute="bottom" constant="8" id="gJT-JK-exI"/>
+                                    <constraint firstAttribute="bottom" secondItem="qIl-yj-BZL" secondAttribute="bottom" constant="16" id="wn3-R5-Bi9"/>
+                                    <constraint firstItem="Znh-1u-TeP" firstAttribute="leading" secondItem="nsl-PU-5xQ" secondAttribute="leading" constant="16" id="yT3-51-zJU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nsl-PU-5xQ" secondAttribute="trailing" id="ETL-6p-kli"/>
+                            <constraint firstItem="nsl-PU-5xQ" firstAttribute="leading" secondItem="z2y-M7-dkt" secondAttribute="leading" id="Sda-QC-Eei"/>
+                            <constraint firstAttribute="bottom" secondItem="nsl-PU-5xQ" secondAttribute="bottom" id="o5l-Cj-LLN"/>
+                            <constraint firstItem="nsl-PU-5xQ" firstAttribute="top" secondItem="z2y-M7-dkt" secondAttribute="top" id="xno-mB-kIK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowLevel">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="z2y-M7-dkt" firstAttribute="top" secondItem="miP-p1-NvP" secondAttribute="top" constant="6" id="MIL-hw-jCk"/>
+                    <constraint firstAttribute="trailing" secondItem="z2y-M7-dkt" secondAttribute="trailing" constant="12" id="WSc-U9-cT0"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="z2y-M7-dkt" secondAttribute="bottom" constant="6" id="bUv-4J-b3h"/>
+                    <constraint firstItem="z2y-M7-dkt" firstAttribute="leading" secondItem="miP-p1-NvP" secondAttribute="leading" constant="12" id="zY5-QL-r7L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cardView" destination="nsl-PU-5xQ" id="VUv-po-gqd"/>
+                <outlet property="expandHandle" destination="wn3-R5-Bi9" id="m2w-8Z-2iJ"/>
+                <outlet property="lblDesc" destination="qIl-yj-BZL" id="1Qy-F3-252"/>
+                <outlet property="lblTitle" destination="Znh-1u-TeP" id="Nvf-eo-LJd"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="125"/>
+        </tableViewCell>
+    </objects>
+</document>

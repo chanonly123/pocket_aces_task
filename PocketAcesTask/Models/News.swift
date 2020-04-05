@@ -13,11 +13,13 @@ class NewsTopHeadlinesData: Codable {
     var status: String?
     var totalResults: Int?
     var articles: [ArticleEntry]?
+    var message: String?
 
     enum CodingKeys: String, CodingKey {
         case status = "status"
         case totalResults = "totalResults"
         case articles = "articles"
+        case message = "message"
     }
 }
 
@@ -44,16 +46,5 @@ class ArticleEntry: Codable {
     }
     
     // others
-    var expanded = true
-}
-
-class SourceEntry: Codable {
-
-    var name: String?
-    var id: String?
-
-    enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case id = "id"
-    }
+    var expanded = false
 }

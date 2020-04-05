@@ -39,4 +39,12 @@ extension UIView {
             layer.sublayers?.first(where: { $0.name == layerName })?.removeFromSuperlayer()
         }
     }
+    
+    func getViewController() -> UIViewController? {
+        var nextResponder = next
+        while nextResponder != nil && !(nextResponder is UIViewController) {
+            nextResponder = nextResponder?.next
+        }
+        return nextResponder as? UIViewController
+    }
 }

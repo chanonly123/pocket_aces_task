@@ -136,6 +136,7 @@ public class HttpResult<T: Codable> {
     public var error: Error?
     public var string: String?
     public var json: T?
+    public var notReached = true
     
     var succ: Bool = false
     
@@ -146,5 +147,6 @@ public class HttpResult<T: Codable> {
         self.error = error
         
         self.succ = (self.response?.statusCode ?? 0) == 200
+        self.notReached = (self.response?.statusCode ?? 0) == 0
     }
 }

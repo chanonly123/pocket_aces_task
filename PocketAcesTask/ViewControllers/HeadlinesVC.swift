@@ -9,28 +9,50 @@
 import UIKit
 
 class HeadlinesVC: BaseTableViewController {
+    override class var fromStoryboard: UIStoryboard? { return Storybaords.main }
     
-    let paginator = Paginator<ArticleEntry>()
+    let paginator = Paginator<ArticleEntry>(startPage: 0)
+    
+    var input = HeadlineNewsInput.country(CountryEntry.createMyCountry()) {
+        didSet {
+            paginator.getNextPage(fromStart: true)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        switch input {
+        case .country(_):
+            title = "Headlines"
+        case .source(let source):
+            title = source.name ?? ""
+        }
+        
+        
+        tableView.register(nibType: HeadlineCell.self)
         addPullToRefresh()
         
         paginator.returnPageData = { [weak self] page, callIndex in
             guard let `self` = self else { return }
             
+            self.emptyView.isHidden = true
             if self.paginator.items.isEmpty {
                 self.activityIndicator.startAnimating()
             } else {
                 self.showLoadingFooter = true
             }
             
-            NewsApi.getTopHeadline(page: page) { (res, data) in
-                self.paginator.nextPageCompletion(success: res.succ, nextItems: data?.articles ?? [], callIndex: callIndex)
+            NewsApi.getTopHeadline(page: page, input: self.input) { [weak self] (res, data) in
+                guard let `self` = self else { return }
+                self.paginator.nextPageCompletion(success: res.succ,
+                                                  nextItems: data?.articles ?? [],
+                                                  callIndex: callIndex,
+                                                  thisPage: page)
                 self.endRefreshing()
-                self.showLoadingFooter = false
                 self.tableView.reloadData()
+                self.emptyView.isHidden = !self.paginator.items.isEmpty
+                self.emptyView.title = res.notReached ? R.string.noInternet : (data?.message ?? R.string.noResult)
             }
         }
         
@@ -42,7 +64,7 @@ class HeadlinesVC: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(type: NewsCell.self)
+        let cell = tableView.dequeueReusableCell(type: HeadlineCell.self)
         cell.article = paginator.items[indexPath.row]
         cell.reloadViews()
         return cell
@@ -57,62 +79,7 @@ class HeadlinesVC: BaseTableViewController {
     }
 }
 
-class NewsCell: BaseTableViewCell {
-    
-    @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var ivImage: UIImageView!
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblDesc: UILabel!
-    @IBOutlet var expandHandle: NSLayoutConstraint!
- 
-    var article: ArticleEntry?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        cardView.onTap() { [weak self] _ in
-            guard let article = self?.article else { return }
-            article.expanded = !article.expanded
-            self?.toggle(expand: article.expanded, animated: true)
-        }
-    }
-    
-    func reloadViews() {
-        guard let article = article else { return }
-        lblTitle.text = article.title
-        lblDesc.text = article.description
-        ivImage.setNewsPic(url: article.urlToImage)
-        
-        article.expanded = !article.expanded
-        toggle(expand: article.expanded, animated: false)
-    }
-    
-    @IBAction func actionFullStory() {
-        let viewc = FullNewsVC.instantiate()
-        viewc.article = article
-        AppDelegate.getNavController()?.present(viewc, animated: true)
-    }
-    
-    func toggle(expand: Bool, animated: Bool) {
-        if animated {
-            if expand {
-                lblDesc.alpha = 0
-                expandHandle.isActive = expand
-                updateCellHeight()
-                UIView.animate(withDuration: 0.3) {
-                    self.lblDesc.alpha = 1
-                }
-            } else {
-                self.expandHandle.isActive = expand
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.lblDesc.alpha = 0
-                    self.layoutIfNeeded()
-                }) { _ in
-                    self.updateCellHeight()
-                }
-            }
-        } else {
-            lblDesc.alpha = expand ? 1 : 0
-            expandHandle.isActive = expand
-        }
-    }
+enum HeadlineNewsInput {
+    case country(CountryEntry)
+    case source(SourceEntry)
 }

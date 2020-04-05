@@ -21,6 +21,8 @@ class BaseTableViewController: BaseViewController {
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
+        
+        adjustScrollViewInsets(tableView)
     }
     
     
@@ -44,6 +46,7 @@ class BaseTableViewController: BaseViewController {
         if refreshControl.isRefreshing {
             refreshControl.endRefreshing()
         }
+        self.showLoadingFooter = false
     }
     
     // MARK: Next page loading footer
@@ -66,6 +69,11 @@ class BaseTableViewController: BaseViewController {
                 tableView.sectionFooterHeight = 0
             }
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        adjustScrollViewInsets(tableView)
     }
 }
 
@@ -93,21 +101,26 @@ extension BaseTableViewController: UITableViewDelegate {
 
 class Paginator<T> {
     
+    let startPage: Int
     var pageCallIndex = 0
-    var page = 0
+    var page: Int
     var items = [T]()
     var isGettingData = false
     
-    var returnPageData: ((Int, Int)->Void) = { _, _ in
-        assertionFailure("Please define this")
+    init(startPage: Int) {
+        self.startPage = startPage
+        self.page = startPage
     }
     
+    var returnPageData: ((Int, Int)->Void)?
+    
     func getNextPage(fromStart: Bool) {
+        if returnPageData == nil { return }
         if fromStart {
-            if page == 0 && isGettingData {
+            if page == startPage && isGettingData {
                 // do nothing
             } else {
-                page = 0
+                page = startPage
                 isGettingData = false
             }
         }
@@ -115,11 +128,14 @@ class Paginator<T> {
         pageCallIndex += 1
         isGettingData = true
         print("calling api, page: \(page)")
-        returnPageData(page, pageCallIndex)
+        returnPageData?(page, pageCallIndex)
     }
     
-    func nextPageCompletion(success: Bool, nextItems: [T], callIndex: Int) {
+    func nextPageCompletion(success: Bool, nextItems: [T], callIndex: Int, thisPage: Int) {
         if callIndex != pageCallIndex { return }
+        if page == startPage {
+            items.removeAll()
+        }
         if nextItems.isEmpty {
             page = -1 // marks end of page
         } else {
