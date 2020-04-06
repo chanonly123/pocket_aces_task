@@ -11,11 +11,14 @@ import UIKit
 class HeadlinesVC: BaseTableViewController {
     override class var fromStoryboard: UIStoryboard? { return Storybaords.main }
     
-    let paginator = Paginator<ArticleEntry>(startPage: 0)
+    let paginator = Paginator<ArticleEntry>(startPage: 1)
     
     var input = HeadlineNewsInput.country(CountryEntry.createMyCountry()) {
         didSet {
-            paginator.getNextPage(fromStart: true)
+            if tableView != nil {
+                tableView.contentOffset.y = -tableView.contentInset.top
+                paginator.getNextPage(fromStart: true)
+            }
         }
     }
 

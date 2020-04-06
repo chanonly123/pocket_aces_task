@@ -103,27 +103,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchNewsCell" rowHeight="117" id="4QH-RT-bAo" customClass="SearchNewsCell" customModule="PocketAcesTask" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="117"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchNewsCell" rowHeight="125" id="4QH-RT-bAo" customClass="SearchNewsCell" customModule="PocketAcesTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4QH-RT-bAo" id="W9b-BO-4ov">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZyT-2n-HuZ" customClass="UIViewExtended" customModule="PocketAcesTask" customModuleProvider="target">
-                                                    <rect key="frame" x="12" y="6" width="390" height="83.5"/>
+                                                    <rect key="frame" x="12" y="6" width="390" height="87.5"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TqM-De-cbP" customClass="UIViewExtended" customModule="PocketAcesTask" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="83.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="87.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ZY7-g8-EfZ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="111.5" height="83.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="87.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="ZY7-g8-EfZ" secondAttribute="height" multiplier="4:3" id="ac3-tj-fxp"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coronavirus likely ended record U.S. job growth in March - Reuters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-mE-CXF">
-                                                                    <rect key="frame" x="123.5" y="8" width="258.5" height="61"/>
+                                                                    <rect key="frame" x="128.5" y="8" width="253.5" height="61"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -132,10 +132,10 @@
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="ZY7-g8-EfZ" firstAttribute="top" secondItem="TqM-De-cbP" secondAttribute="top" id="4uE-ki-51m"/>
+                                                                <constraint firstItem="zUU-mE-CXF" firstAttribute="width" secondItem="TqM-De-cbP" secondAttribute="width" multiplier="0.65" id="D8i-pm-DVa"/>
                                                                 <constraint firstItem="zUU-mE-CXF" firstAttribute="top" secondItem="TqM-De-cbP" secondAttribute="top" constant="8" id="Njm-6K-Uhh"/>
                                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zUU-mE-CXF" secondAttribute="bottom" constant="8" id="Rlh-uU-xug"/>
                                                                 <constraint firstAttribute="trailing" secondItem="zUU-mE-CXF" secondAttribute="trailing" constant="8" id="bFc-S1-Csh"/>
-                                                                <constraint firstItem="ZY7-g8-EfZ" firstAttribute="width" secondItem="TqM-De-cbP" secondAttribute="width" multiplier="1:3.5" id="fpr-wD-twb"/>
                                                                 <constraint firstItem="zUU-mE-CXF" firstAttribute="leading" secondItem="ZY7-g8-EfZ" secondAttribute="trailing" constant="12" id="hDp-qT-oC7"/>
                                                                 <constraint firstItem="ZY7-g8-EfZ" firstAttribute="leading" secondItem="TqM-De-cbP" secondAttribute="leading" id="tzR-rF-CY2"/>
                                                                 <constraint firstAttribute="bottom" secondItem="ZY7-g8-EfZ" secondAttribute="bottom" id="wnG-1p-AYD"/>

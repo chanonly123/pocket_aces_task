@@ -63,7 +63,7 @@ public class NetworkRequest {
         let task = getSession().dataTask(with: urlRequest) { [weak self] data, res, error in
             self?.logging(url: urlString, requestHeaders: requestHeaders, params: params, data: data)
             guard let `self` = self else { return }
-            if returnCache, res == nil, let found = URLCache.shared.cachedResponse(for: urlRequestForCache) {
+            if returnCache, let error = error as NSError?, error.code == -1009, let found = URLCache.shared.cachedResponse(for: urlRequestForCache) {
                 self.callCompletion(data: found.data, res: nil, error: nil, handler: handler)
             } else {
                 self.callCompletion(data: data, res: res, error: error, handler: handler)

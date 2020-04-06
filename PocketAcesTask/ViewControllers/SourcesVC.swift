@@ -14,8 +14,10 @@ class SourcesVC: BaseTableViewController {
     var items = [SourceEntry]()
     var inputCountry = CountryEntry.createMyCountry() {
         didSet {
-            tableView.contentOffset.y = 0
-            getSources()
+            if tableView != nil {
+                tableView.contentOffset.y = -tableView.contentInset.top
+                getSources()
+            }
         }
     }
 
