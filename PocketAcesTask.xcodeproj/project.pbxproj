@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,22 +36,22 @@
 		1757ACF224372FC5002E028D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACED24372FC5002E028D /* BaseViewController.swift */; };
 		1757ACF324372FC5002E028D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACEE24372FC5002E028D /* Utils.swift */; };
 		1757ACF424372FC5002E028D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757ACEF24372FC5002E028D /* NetworkRequest.swift */; };
-		176C9D442438B65600416D21 /* UIViewTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C9D432438B65600416D21 /* UIViewTapGesture.swift */; };
 		176C9D462438BA9000416D21 /* FullNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C9D452438BA9000416D21 /* FullNewsVC.swift */; };
 		176C9D482438BDA300416D21 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C9D472438BDA300416D21 /* UIImageView.swift */; };
 		176C9D4A2438BE6B00416D21 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C9D492438BE6B00416D21 /* UIView.swift */; };
-		1786C00C2437387A00F88061 /* CustomUIimageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0072437387A00F88061 /* CustomUIimageViews.swift */; };
-		1786C00D2437387A00F88061 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0082437387A00F88061 /* BaseTableViewCell.swift */; };
-		1786C00E2437387A00F88061 /* CustomUIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C0092437387A00F88061 /* CustomUIViews.swift */; };
-		1786C00F2437387A00F88061 /* UserClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C00A2437387A00F88061 /* UserClusterView.swift */; };
-		1786C0102437387A00F88061 /* CustomUIButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C00B2437387A00F88061 /* CustomUIButtons.swift */; };
-		1786C012243738A600F88061 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C011243738A600F88061 /* EmptyView.swift */; };
 		1786C01424373A9000F88061 /* test1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1786C01324373A9000F88061 /* test1.jpeg */; };
 		1786C01624373B5600F88061 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C01524373B5600F88061 /* BaseTableViewController.swift */; };
 		178817502439E70C00DB1C17 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1788174F2439E70C00DB1C17 /* TabBarVC.swift */; };
 		178817522439EEC300DB1C17 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178817512439EEC300DB1C17 /* Resources.swift */; };
 		178817542439F42A00DB1C17 /* CountryNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178817532439F42A00DB1C17 /* CountryNewsVC.swift */; };
 		178817562439F4A800DB1C17 /* CountryPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178817552439F4A800DB1C17 /* CountryPickerVC.swift */; };
+		17B9015C243CBF64003B0259 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B90155243CBF64003B0259 /* EmptyView.swift */; };
+		17B9015D243CBF64003B0259 /* CustomUIimageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B90156243CBF64003B0259 /* CustomUIimageViews.swift */; };
+		17B9015E243CBF64003B0259 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B90157243CBF64003B0259 /* BaseTableViewCell.swift */; };
+		17B9015F243CBF64003B0259 /* CustomUIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B90158243CBF64003B0259 /* CustomUIViews.swift */; };
+		17B90160243CBF64003B0259 /* UserClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B90159243CBF64003B0259 /* UserClusterView.swift */; };
+		17B90161243CBF64003B0259 /* UIViewTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9015A243CBF64003B0259 /* UIViewTapGesture.swift */; };
+		17B90162243CBF64003B0259 /* CustomUIButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9015B243CBF64003B0259 /* CustomUIButtons.swift */; };
 		17DA66CF243A4F8600426EA9 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DA66CE243A4F8600426EA9 /* NavController.swift */; };
 		5B1399381F841F2FE9A8E524 /* libPods-PocketAcesTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E3FF15059BECDA6FBB8600 /* libPods-PocketAcesTask.a */; };
 /* End PBXBuildFile section */
@@ -88,22 +88,22 @@
 		1757ACED24372FC5002E028D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1757ACEE24372FC5002E028D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1757ACEF24372FC5002E028D /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		176C9D432438B65600416D21 /* UIViewTapGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTapGesture.swift; sourceTree = "<group>"; };
 		176C9D452438BA9000416D21 /* FullNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNewsVC.swift; sourceTree = "<group>"; };
 		176C9D472438BDA300416D21 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		176C9D492438BE6B00416D21 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		1786C0072437387A00F88061 /* CustomUIimageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIimageViews.swift; sourceTree = "<group>"; };
-		1786C0082437387A00F88061 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		1786C0092437387A00F88061 /* CustomUIViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIViews.swift; sourceTree = "<group>"; };
-		1786C00A2437387A00F88061 /* UserClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClusterView.swift; sourceTree = "<group>"; };
-		1786C00B2437387A00F88061 /* CustomUIButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButtons.swift; sourceTree = "<group>"; };
-		1786C011243738A600F88061 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		1786C01324373A9000F88061 /* test1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpeg; sourceTree = "<group>"; };
 		1786C01524373B5600F88061 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		1788174F2439E70C00DB1C17 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		178817512439EEC300DB1C17 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		178817532439F42A00DB1C17 /* CountryNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryNewsVC.swift; sourceTree = "<group>"; };
 		178817552439F4A800DB1C17 /* CountryPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerVC.swift; sourceTree = "<group>"; };
+		17B90155243CBF64003B0259 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		17B90156243CBF64003B0259 /* CustomUIimageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIimageViews.swift; sourceTree = "<group>"; };
+		17B90157243CBF64003B0259 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		17B90158243CBF64003B0259 /* CustomUIViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIViews.swift; sourceTree = "<group>"; };
+		17B90159243CBF64003B0259 /* UserClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClusterView.swift; sourceTree = "<group>"; };
+		17B9015A243CBF64003B0259 /* UIViewTapGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTapGesture.swift; sourceTree = "<group>"; };
+		17B9015B243CBF64003B0259 /* CustomUIButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButtons.swift; sourceTree = "<group>"; };
 		17DA66CE243A4F8600426EA9 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		2D74C43CC14D81979192C228 /* Pods-PocketAcesTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketAcesTask.release.xcconfig"; path = "Target Support Files/Pods-PocketAcesTask/Pods-PocketAcesTask.release.xcconfig"; sourceTree = "<group>"; };
 		3D62B6CDAB3E0AD3993F1C7D /* Pods-PocketAcesTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketAcesTask.debug.xcconfig"; path = "Target Support Files/Pods-PocketAcesTask/Pods-PocketAcesTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 			children = (
 				17018682243A0A8F00B7EA45 /* ReuseCells */,
 				1757ACEA24372FC5002E028D /* wrappers */,
-				1786C0062437387A00F88061 /* CustomViews */,
+				17B90154243CBF64003B0259 /* CustomViews */,
 				1712960C2437333100092429 /* Models */,
 				17129601243730B500092429 /* RestApis */,
 				171295F72437309D00092429 /* Extensions */,
@@ -253,19 +253,18 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		1786C0062437387A00F88061 /* CustomViews */ = {
+		17B90154243CBF64003B0259 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				1786C0072437387A00F88061 /* CustomUIimageViews.swift */,
-				1786C0082437387A00F88061 /* BaseTableViewCell.swift */,
-				1786C0092437387A00F88061 /* CustomUIViews.swift */,
-				1786C00A2437387A00F88061 /* UserClusterView.swift */,
-				1786C00B2437387A00F88061 /* CustomUIButtons.swift */,
-				1786C011243738A600F88061 /* EmptyView.swift */,
-				176C9D432438B65600416D21 /* UIViewTapGesture.swift */,
+				17B90155243CBF64003B0259 /* EmptyView.swift */,
+				17B90156243CBF64003B0259 /* CustomUIimageViews.swift */,
+				17B90157243CBF64003B0259 /* BaseTableViewCell.swift */,
+				17B90158243CBF64003B0259 /* CustomUIViews.swift */,
+				17B90159243CBF64003B0259 /* UserClusterView.swift */,
+				17B9015A243CBF64003B0259 /* UIViewTapGesture.swift */,
+				17B9015B243CBF64003B0259 /* CustomUIButtons.swift */,
 			);
-			name = CustomViews;
-			path = "../../eezylife-sample/eezylife-sample/CustomViews";
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		E91CAC8BBD41C497437087FB /* Frameworks */ = {
@@ -380,12 +379,11 @@
 				17018688243A0D5F00B7EA45 /* Sources.swift in Sources */,
 				17129606243730B500092429 /* RestApi.swift in Sources */,
 				176C9D482438BDA300416D21 /* UIImageView.swift in Sources */,
+				17B90160243CBF64003B0259 /* UserClusterView.swift in Sources */,
+				17B9015D243CBF64003B0259 /* CustomUIimageViews.swift in Sources */,
 				17018686243A0ABA00B7EA45 /* HeadlineCell.swift in Sources */,
 				1757ACCD24372CDB002E028D /* HeadlinesVC.swift in Sources */,
-				1786C0102437387A00F88061 /* CustomUIButtons.swift in Sources */,
-				1786C00E2437387A00F88061 /* CustomUIViews.swift in Sources */,
 				171295FE2437309D00092429 /* UIColor.swift in Sources */,
-				176C9D442438B65600416D21 /* UIViewTapGesture.swift in Sources */,
 				1757ACF024372FC5002E028D /* Observer.swift in Sources */,
 				171296002437309D00092429 /* String.swift in Sources */,
 				17DA66CF243A4F8600426EA9 /* NavController.swift in Sources */,
@@ -393,26 +391,27 @@
 				174E73872438F44500C4C48B /* SearchNewsVC.swift in Sources */,
 				1757ACF124372FC5002E028D /* ImageLoader.swift in Sources */,
 				1757ACF324372FC5002E028D /* Utils.swift in Sources */,
+				17B9015C243CBF64003B0259 /* EmptyView.swift in Sources */,
 				17129607243730B500092429 /* NewsApi.swift in Sources */,
-				1786C012243738A600F88061 /* EmptyView.swift in Sources */,
-				1786C00C2437387A00F88061 /* CustomUIimageViews.swift in Sources */,
 				176C9D462438BA9000416D21 /* FullNewsVC.swift in Sources */,
+				17B9015F243CBF64003B0259 /* CustomUIViews.swift in Sources */,
 				1704A746243A180F00A8CB7C /* SourcesVC.swift in Sources */,
+				17B9015E243CBF64003B0259 /* BaseTableViewCell.swift in Sources */,
 				178817562439F4A800DB1C17 /* CountryPickerVC.swift in Sources */,
 				1757ACC924372CDB002E028D /* AppDelegate.swift in Sources */,
 				178817542439F42A00DB1C17 /* CountryNewsVC.swift in Sources */,
 				1712960B2437321F00092429 /* LocalData.swift in Sources */,
 				171295FF2437309D00092429 /* UITableView.swift in Sources */,
-				1786C00D2437387A00F88061 /* BaseTableViewCell.swift in Sources */,
 				17129605243730B500092429 /* Apis.swift in Sources */,
 				178817502439E70C00DB1C17 /* TabBarVC.swift in Sources */,
 				1786C01624373B5600F88061 /* BaseTableViewController.swift in Sources */,
 				170186812439F65700B7EA45 /* Country.swift in Sources */,
 				1757ACDD24372E58002E028D /* DevEnv.swift in Sources */,
-				1786C00F2437387A00F88061 /* UserClusterView.swift in Sources */,
 				1701868B243A104B00B7EA45 /* SourceCell.swift in Sources */,
+				17B90161243CBF64003B0259 /* UIViewTapGesture.swift in Sources */,
 				176C9D4A2438BE6B00416D21 /* UIView.swift in Sources */,
 				1757ACF224372FC5002E028D /* BaseViewController.swift in Sources */,
+				17B90162243CBF64003B0259 /* CustomUIButtons.swift in Sources */,
 				1712960E2437334000092429 /* News.swift in Sources */,
 				178817522439EEC300DB1C17 /* Resources.swift in Sources */,
 				171296092437312800092429 /* UIButton.swift in Sources */,
